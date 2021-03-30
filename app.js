@@ -62,7 +62,7 @@ function createFileInputs() {
     const label = document.createElement('label');
     label.setAttribute('for', choicesArray[i] + '1');
     label.id = choicesArray[i] + '2';
-    label.innerText = 'Choose img ' + (i + 1) + '.     ';
+    label.innerText = 'Upload image' + (i + 1) + '.     ';
     document.getElementById('inputFile').appendChild(input);
     document.getElementById('inputFile').appendChild(label);
   }

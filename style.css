@@ -48,7 +48,6 @@ header {
 .buttonWithImg {
   background-color: inherit;
   border-radius: 50px;
-  border-style: none;
   width: 80px;
   height: 80px;
 }
@@ -93,7 +92,8 @@ img {
   font-size: 40px;
   background-color: inherit;
   border-radius: 20px;
-  border: 2px;
+  border: 1px;
+  border-style: solid;
   cursor: pointer;
 }
 
@@ -126,9 +126,16 @@ p {
   display: block;
 }
 
-#R ,#P , #S{
+#R ,#P , #S, #R2 ,#P2 , #S2{
   cursor: pointer;
+  border: #0d6605;
+  border-style:solid;
+  border-width: 1px;
+  border-radius: 40px;
 }
+
+
+
 
 
 
@@ -136,6 +143,28 @@ p {
 .title {
   font-size: 60px;
   font-weight: 600;
+}
+
+
+
+.result-section {
+  height: 400px;
+  box-sizing: border-box;
+  width: 470px;
+  font-size: 50px;
+  text-align: center;
+  position: fixed;
+  top: -100%;
+  left:calc( 50% - 235px);
+  background-image: linear-gradient(135deg, #fac47e 0%, #80ff72 74%);
+  border-radius: 0.5rem;
+  padding: 3rem;
+  transition: top 1s cubic-bezier(0.47, 1.64, 0.41, 0.8);
+}
+
+.middle-screen {
+  top: calc(50% - 250px);
+  border-style:solid;
 }
 
 @media only screen and (max-width: 768px) {
@@ -150,6 +179,8 @@ p {
 
 #game-mode , #play-again-button{
   font-size: 25px;
+  border: #063102;
+  border-style:solid;
 }
 
 }

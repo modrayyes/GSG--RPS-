@@ -107,7 +107,7 @@ img {
 
 #play-again-button,
 #game-mode {
-  margin-top: 50px;
+  margin-top: 10px;
   left: 50%;
   font-family: inherit;
   font-size: 40px;
@@ -158,8 +158,12 @@ p {
 
 
 .middle-screen {
-  top: calc(50% - 150px);
+  top: calc(50% - 120px);
   border-style:none;
+}
+
+#result-title{
+  font-size: 30px;
 }
 
 @media only screen and (max-width: 768px) {

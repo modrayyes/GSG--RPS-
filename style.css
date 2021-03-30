@@ -87,6 +87,7 @@ img {
 
 #play-again-button,
 #game-mode {
+  margin-top: 100px;
   left: 50%;
   font-family: inherit;
   font-size: 40px;

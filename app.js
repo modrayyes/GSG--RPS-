@@ -91,6 +91,9 @@ function showPlayersChoices(i) {
     document.getElementById('computer-section').appendChild(computerImg);
     winner(PlayerChoise, ComputerChoice);
     resultSection.classList.add('middle-screen');
+  document
+    .getElementsByClassName('result-container')[0]
+    .classList.add('result-container-height');
   };
 }
 
@@ -123,7 +126,7 @@ function showResult(resultMessage) {
 }
 
 function Wins() {
-  showResult('You Won :) ');
+  showResult('You Won :)     ');
 }
 
 function loses() {
@@ -131,7 +134,7 @@ function loses() {
 }
 
 function draw() {
-  showResult("it's a draw");
+  showResult("it's a draw    ");
 }
 
 function change() {

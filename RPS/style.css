@@ -1,0 +1,155 @@
+.gradient {
+  background-image: linear-gradient(315deg, #faba7e 0%, #80ff72 74%);
+  background-repeat: no-repeat;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Comic Sans MS;
+}
+
+header {
+  width: 100%;
+  text-align: center;
+  margin: 50px 0 100px 0;
+  font-size: 30px;
+}
+
+.header-img {
+  width: 100%;
+  max-height: 100%;
+}
+
+.result-img {
+  width: 80px;
+  max-height: 80px;
+}
+
+.buttons-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+}
+
+.buttons {
+  text-align: center;
+}
+
+.upload {
+  left: 50%;
+  font-family: inherit;
+  font-size: 15px;
+  background-color: inherit;
+  border-radius: 20px;
+  border: 2px;
+}
+
+.buttonWithImg {
+  background-color: inherit;
+  border-radius: 50px;
+  border-style: none;
+  width: 80px;
+  height: 80px;
+}
+
+.buttonWithImg:hover {
+  box-shadow: 5px 5px 15px green;
+}
+
+button,
+img {
+  outline: none;
+}
+
+.main-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  font-size: 50px;
+}
+
+#player-section {
+  text-align: center;
+}
+
+#computer-section {
+  text-align: center;
+}
+
+#result-section {
+  text-align: center;
+  font-size: 50px;
+}
+
+.result-section {
+  text-align: center;
+}
+
+#play-again-button,
+#game-mode {
+  left: 50%;
+  font-family: inherit;
+  font-size: 40px;
+  background-color: inherit;
+  border-radius: 20px;
+  border: 2px;
+  cursor: pointer;
+}
+
+#play-again-button:hover,
+#game-mode:hover {
+  background-image: linear-gradient(135deg, #fac47e 0%, #80ff72 74%);
+  box-shadow: 5px 5px 15px green;
+  border-radius: 20px;
+}
+
+input {
+  display: none;
+}
+
+label {
+  color: #063102;
+  height: 50px;
+  width: 10px;
+  background-color: inherit;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+p {
+  display: inline;
+}
+
+.block {
+  display: block;
+}
+
+#R ,#P , #S{
+  cursor: pointer;
+}
+
+
+
+
+.title {
+  font-size: 60px;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 768px) {
+  .title {
+    font-size: 38px;
+  }
+
+
+.block{
+  font-size:  25px;
+}
+
+#game-mode , #play-again-button{
+  font-size: 25px;
+}
+
+}

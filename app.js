@@ -15,11 +15,13 @@ var customButtonSrcArray = ['a', 'b', 'c'];
 
 const playAgainButton = document.getElementById('play-again-button');
 const changeModeButton = document.getElementById('game-mode');
+const resultSection = document.getElementById('result-section');
+
 
 playAgainButton.disabled = true;
 playAgainButton.addEventListener(
   'click',
-  removable('Final-Result', 'player01', 'comp01')
+  reset('Final-Result', 'player01', 'comp01')
 );
 changeModeButton.addEventListener('click', change());
 
@@ -88,6 +90,7 @@ function showPlayersChoices(i) {
     computerImg.id = 'comp01';
     document.getElementById('computer-section').appendChild(computerImg);
     winner(PlayerChoise, ComputerChoice);
+    resultSection.classList.add('middle-screen');
   };
 }
 
@@ -124,7 +127,7 @@ function Wins() {
 }
 
 function loses() {
-  showResult('computer Won :( ');
+  showResult('computer Won :(');
 }
 
 function draw() {
@@ -141,7 +144,8 @@ function change() {
 
     removeElementsById(['R', 'P', 'S', 'Final-Result', 'player01', 'comp01']);
     addButton();
-    document.getElementById('play-again-button').disabled = true;
+    playAgainButton.disabled = true;
+    resultSection.classList.remove('middle-screen');
   };
 }
 
@@ -154,19 +158,20 @@ function removeElementsById(idsArray = []) {
   });
 }
 
-function removable(removableId1, removableId2, removableId3) {
+function reset(removableId1, removableId2, removableId3) {
   return function () {
     document.getElementById(removableId1).remove();
     document.getElementById(removableId2).remove();
     document.getElementById(removableId3).remove();
     toggle(false, true);
+    resultSection.classList.remove('middle-screen');
   };
 }
 //  Disable or enable buttons
 function toggle(ToF, xToF) {
   for (let x = 0; x < choicesArray.length; x++) {
     document.getElementById(choicesArray[x]).disabled = ToF;
-    document.getElementById('play-again-button').disabled = xToF;
+    playAgainButton.disabled = xToF;
   }
 }
 
